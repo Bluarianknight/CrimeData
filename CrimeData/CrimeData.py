@@ -21,7 +21,7 @@ sel = input()
 
 while menu != 'q':
     if menu == 'l':
-        pp.pprint(Crime.dict)  
+        pp.pprint(Crime.dictionary)  
         menu = input('Provided. Please enter from these options; l to look at the list, a to add to the list, or q to quit.')
         print(Crime.counter)
     elif menu == 'a':
