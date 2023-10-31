@@ -13,7 +13,7 @@ class CrimeDict:
     def addtoDict(self, name, gender, dateof, location, age, status):
         adddict = {self.counter:{'Name':name, 'Gender':gender, 'Date of':dateof, 'Location':location, 'Age':age, 'Status':status}}
 
-        self.dictionary.update(adddict)
+        self.dictionary[self.counter] = adddict[self.counter] 
         self.counter = self.counter + 1
 
 

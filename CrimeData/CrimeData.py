@@ -1,6 +1,6 @@
 from email.policy import default
 import pprint
-from CrimDict import *
+from CrimeDict import *
 
 pp = pprint.PrettyPrinter(depth=2)
 
