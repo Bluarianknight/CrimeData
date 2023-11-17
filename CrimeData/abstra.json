@@ -1,0 +1,66 @@
+{
+  "version": "0.1",
+  "workspace": {
+    "name": "Untitled Workspace",
+    "sidebar": [
+      {
+        "id": "new-dash_5Gb290v2vJ",
+        "name": "CSV File Reader",
+        "path": "new-dash_5Gb290v2vJ",
+        "type": "dash",
+        "visible": false
+      }
+    ],
+    "root": null,
+    "theme": null,
+    "logo_url": null,
+    "brand_name": null,
+    "main_color": null,
+    "font_family": null,
+    "font_color": null
+  },
+  "jobs": [],
+  "hooks": [],
+  "forms": [],
+  "dashes": [
+    {
+      "path": "CrimeGUI.py",
+      "title": "CSV File Reader",
+      "layout": {
+        "props": {},
+        "version": "0.2",
+        "slot": {
+          "68e7813c-9781-42f7-8a2f-88a075ae4465": {
+            "id": "68e7813c-9781-42f7-8a2f-88a075ae4465",
+            "type": "pandas-output",
+            "colStart": 5,
+            "colEnd": 11,
+            "rowStart": 0,
+            "rowEnd": 22,
+            "props": {
+              "df": "Crime.csvData",
+              "label": "Database"
+            },
+            "events": {},
+            "variable": null
+          },
+          "394972f9-4097-4489-a01a-2be0f393695d": {
+            "id": "394972f9-4097-4489-a01a-2be0f393695d",
+            "type": "rich-text-input",
+            "colStart": 0,
+            "colEnd": 4,
+            "rowStart": 0,
+            "rowEnd": 22,
+            "props": {
+              "label": "\"Insert your rich text here!\""
+            },
+            "events": {},
+            "variable": null
+          }
+        }
+      },
+      "file": "CrimeGUI.py"
+    }
+  ],
+  "scripts": []
+}
