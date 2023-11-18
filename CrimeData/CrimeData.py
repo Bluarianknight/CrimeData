@@ -24,8 +24,10 @@ frametwo = Frame(root)
 frame.pack(fill=BOTH,side="right",expand=1)
 frametwo.pack(fill=BOTH,side="left",expand=1)
 tabledata = TableModel.getSampleData()
-table = pt = Table(frame, dataframe=tabledata, showtoolbar=False, showstatusbar=True)
+table = pt = Table(frame, dataframe=tabledata, showtoolbar=True, showstatusbar=True)
 
+
+sortButton = Button(frametwo, text="Sort")
 
 
 # Handles the file dialog to obtain file location, before sending it to loadfile(). Handles error exceptions.
