@@ -1,3 +1,7 @@
+# The project uses three different libraries to handle the database and GUI creation. It uses tkinter for the GUI creation, as it is a library for application creature. 
+# We also use pandas, a database library, to load the files and handle the database, and pandastable is used to allow the pandas database to seamlessly
+# be implemented into a tkinter GUI.
+
 from email.policy import default
 from CrimeDict import * # CrimeDict is used for managing the data in the back - currently not used yet proper as pandastable handles a lot of it.
 from pandas import DataFrame # If it wasn't imported specifically, it wouldn't work. 
@@ -24,7 +28,7 @@ frametwo = Frame(root)
 frame.pack(fill=BOTH,side="right",expand=1)
 frametwo.pack(fill=BOTH,side="left",expand=1)
 tabledata = TableModel.getSampleData()
-table = pt = Table(frame, dataframe=tabledata, showtoolbar=True, showstatusbar=True)
+table = pt = Table(frame, dataframe=tabledata, showtoolbar=False, showstatusbar=True)
 
 
 sortButton = Button(frametwo, text="Sort")
@@ -34,6 +38,7 @@ sortButton = Button(frametwo, text="Sort")
 # Referenced https://gist.github.com/RamonWill/0686bd8c793e2e755761a8f20a42c762#file-tkinterexcel-py-L71 for this, alongside
 # https://www.pythontutorial.net/tkinter/tkinter-open-file-dialog/ helped as well to figure out some issued I had. 
 def findFile():
+    
     
     fileoptions = (("csv files,", "*.csv"),("xlsx files", "*.xlsx"),("json files", "*.json"),("All Files", "*.*"))
     filelocation = filedialog.askopenfilename(initialdir="/",
