@@ -2,36 +2,20 @@ import csv
 import pandas as pd
 from pandastable import Table, TableModel
 
-
+# This class handles the pandas dataframe used in the program.
 class CrimeDataframe:
     
     def __init__(self, data = pd.DataFrame):
-        self.csvData = data
+        self.Data = data # Sets the data as a default dataframe, if none is provided.
         
-    def setData(self, data):
-        self.csvData = data
+    def setData(self, data): # Sets the Data to the dataframe provided.
+        self.Data = data
         
-    def readData(self, csv_file_path):
-        filepath = csv_file_path
-        if filepath[-5:] == '.xlsx':
-            dataf = pd.read_excel(filepath)
-        elif filepath[-5:] == '.json':
-            dataf = pd.read_json(filepath)
-        else:
-            dataf = pd.read_csv(filepath)
             
-    def outputData(self):
-        return self.csvData
+    def outputData(self): # Returns the dataframe. 
+        return self.Data
     
 
-class SortedDataframe(CrimeDataframe):
-    def __init__(self, data):
-        self.csvData = data
-        
-    def sortDataBy(self, category):
-        sortedData = self.csvData.sort_values(by=category, ascending=False)
-        return sortedData
+
     
-    def groupBy(self, category, value):
-        sortedData = self.csvData.groupby(category)
-        return sortedData.get_group(value)
+    
